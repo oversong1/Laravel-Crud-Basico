@@ -18,3 +18,4 @@ class Produto extends Model
         'estoque',
     ];
 }
+
