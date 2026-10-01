@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: laravel_db
+    environment:
+      POSTGRES_DB: loja
+      POSTGRES_USER: loja
+      POSTGRES_PASSWORD: loja
+    ports:
+      - "5440:5432"
+    volumes:
+      - laravel_db_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:4
+    container_name: laravel_adminer
+    ports:
+      - "8088:8080"
+    depends_on:
+      - db
+
+  php:
+    build: ./docker/php
+    container_name: laravel_php
+    ports:
+      - "8096:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+volumes:
+  laravel_db_data:
