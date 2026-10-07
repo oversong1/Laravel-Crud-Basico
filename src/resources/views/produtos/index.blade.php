@@ -33,7 +33,7 @@
 
                         {{-- Formularios HTML so tem GET e POST de verdade - @method('DELETE')
                              "finge" ser um DELETE, e o Laravel entende essa finta --}}
-                        <form action="{{ route('produtos,destroy', $produto)}}" method= "POST" style="display: inline;">
+                        <form action="{{ route('produtos.destroy', $produto)}}" method= "POST" style="display: inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit">Excluir</button>

@@ -17,7 +17,7 @@
             <p style="color: green;">{{ session('sucesso') }}</p>
         @endif
 
-        @yield('conteudo');
+        @yield('conteudo')
     </main>
 </body>
 </html>

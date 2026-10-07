@@ -9,3 +9,159 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+
+/* Reset simples - remove espaçamentos padrão que cada navegador aplica diferente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* Header com o link "Produtos" */
+header {
+    background-color: #1f2937;
+    padding: 16px 24px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main {
+    max-width: 900px;
+    margin: 32px auto;   /* centraliza o conteudo, com respiro nas laterais */
+    padding: 0 16px;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+/* Mensagem de sucesso (session('sucesso'), da Fase 4) */
+main > p {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* Lista de erros de validacao (Fase 5) */
+ul {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 12px 16px 12px 32px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* Link "Novo produto" */
+a.botao,
+main > a {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+/* Tabela de listagem */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #e5e7eb;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+table a {
+    color: #2563eb;
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+/* Formularios (create/edit) */
+form {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1e40af;
+}
+
+/* Botao de apagar, dentro da tabela (form inline) */
+td form {
+    display: inline;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+td form button {
+    background-color: #dc2626;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 0;
+}
+
+td form button:hover {
+    background-color: #991b1b;
+}
